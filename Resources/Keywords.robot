@@ -69,8 +69,6 @@ Fill Out All Sign Up Fields
     Input Text    ${PHONE_FIELD}          ${PHONE}
     Input Text    ${SSN_FIELD}            ${SSN}
     Input Text    ${USERNAME_FIELD}       ${USERNAME}
-    #Input Text    ${PASSWORD_FIELD}       ${PASSWORD2}
-    #Input Text    ${CONFIRM_FIELD}        ${PASSWORD2}
     Input Password    ${PASSWORD_FIELD}    ${PASSWORD}
     Input Password    ${CONFIRM_FIELD}    ${PASSWORD}
 
@@ -85,4 +83,6 @@ Verify Account Creation Success
 Click Sign Up Button
     Wait Until Element Is Visible   ${SIGN_UP_BUTTON_LOCATOR}
     Click Button    ${SIGN_UP_BUTTON_LOCATOR}
+
+
 
