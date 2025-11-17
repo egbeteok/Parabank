@@ -1,18 +1,14 @@
 *** Settings ***
 Library           SeleniumLibrary
-
-Resource  ../Resources/Variables.robot
-Resource  ../Resources/Keywords.robot
-
+Variables   ../Resources/Variables.yaml
+Resource    ../Resources/Keywords.robot
 Suite Setup             Run Keywords
 ...                     Open Browser To Home Page  AND
 ...                     Generate Unique User Data
-
 Suite Teardown          Close Browser
 
 
 *** Test Cases ***
-
 Successful Account Sign Up With Unique Data
     [Documentation]    Tests account creation using newly generated unique data.
     Click Register Link

@@ -1,9 +1,7 @@
-# Import files
-
 *** Settings ***
 
 Library           SeleniumLibrary
-Resource          Variables.robot
+Variables         Variables.yaml
 Library           FakerLibrary
 Library           DateTime
 

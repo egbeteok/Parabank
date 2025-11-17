@@ -1,0 +1,28 @@
+#Application and browser settings
+
+login_url:                "https://parabank.parasoft.com/parabank/admin.htm"
+browser:                  "Chrome"
+
+welcome_message:          "Accounts Overview"
+site_url:                 "https://parabank.parasoft.com/parabank/admin.htm"
+
+
+
+
+register:                 "link:Register"
+first_name_field:         "name:customer.firstName"
+last_name_field:          "id:customer.lastName"
+address_field:            "name:customer.address.street"
+city_field:               "id:customer.address.city"
+state_field:              "id:customer.address.state"
+zip_code_field:           "id:customer.address.zipCode"
+phone_field:              "id:customer.phoneNumber"
+ssn_field:                "id:customer.ssn"
+username_field:           "id:customer.username"
+password_field:           "id:customer.password"
+confirm_field:            "id:repeatedPassword"
+sign_up_button_locator:   "css:input[value='Register']"
+sign_out:                 "//a[text()='Log Out']"
+login_header:             "Customer Login"
+account_name_assertion:   "//p[@class='smallText']"
+sign_up_assertion:        "//h1[@class='title']"
