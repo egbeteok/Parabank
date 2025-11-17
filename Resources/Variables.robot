@@ -3,12 +3,9 @@
 ${LOGIN_URL}      https://parabank.parasoft.com/parabank/admin.htm
 ${BROWSER}        Chrome
 
-#Credentials
-${USERNAME}       johndoe
-${PASSWORD}       Password123
-
-#Expected text message
 ${WELCOME_MESSAGE}    Accounts Overview
+${site_url}  https://parabank.parasoft.com/parabank/admin.htm
+${browser}  Chrome
 
 
 
@@ -26,3 +23,7 @@ ${USERNAME_FIELD}          id:customer.username
 ${PASSWORD_FIELD}          id:customer.password
 ${CONFIRM_FIELD}           id:repeatedPassword
 ${SIGN_UP_BUTTON_LOCATOR}  css:input[value='Register']
+${SIGN_OUT}                //a[text()='Log Out']
+${lOGIN_header}            Customer Login
+${ACCOUNT_NAME_ASSERTION}      //p[@class='smallText']
+${SIGN_UP_ASSERTION}       //h1[@class='title']
