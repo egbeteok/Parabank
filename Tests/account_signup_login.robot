@@ -1,6 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
-Variables   ../Resources/Variables.yaml
+Variables   ../Resources/data.yaml
 Resource    ../Resources/Keywords.robot
 Suite Setup             Run Keywords
 ...                     Open Browser To Home Page  AND
