@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-11-20T08:00:17.392728" rpa="false" schemaversion="5">
+<suite id="s1" name="Ae Api Tests" source="C:\Users\egbet\PycharmProjects\Parabank\Parabank\tests\api_tests\ae_api_tests.robot">
+<test id="s1-t1" name="Verify Product List API" line="13">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-11-20T08:00:17.795431" level="INFO">Creating Session using : alias=ae_api, url=https://automationexercise.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${SESSION_ALIAS}</arg>
+<arg>${BASE_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-11-20T08:00:17.795117" elapsed="0.000575"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-11-20T08:00:18.708458" level="INFO">GET Request : url=https://automationexercise.com/api/productsList 
+ path_url=/api/productsList 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-11-20T08:00:18.709093" level="INFO">GET Response : url=https://automationexercise.com/api/productsList 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 20 Nov 2025 06:00:18 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'POST, OPTIONS, PUT, GET, DELETE', 'x-powered-by': 'Phusion Passenger(R) 6.0.27', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=CWwqNtyU%2Bs6Jz8YZxUVkOBPJd0HmYLd52zmgqHJre66H7KfJQJ049FHjA7lI1DZLEZR1qRNO9uuggUldiZx5OS9KzTFrqLCmh%2BudXd%2B73UextH7KWjk%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '9a15b9e76d336999-HEL', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue &amp; Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]} 
+ </msg>
+<msg time="2025-11-20T08:00:18.709532" level="INFO">C:\Users\egbet\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'automationexercise.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-11-20T08:00:18.710809" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${SESSION_ALIAS}</arg>
+<arg>${ENDPOINT}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-11-20T08:00:17.796069" elapsed="0.914902"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.711555" elapsed="0.000641"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-20T08:00:18.714599" level="INFO">${json_data} = {'responseCode': 200, 'products': [{'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 2, 'name': 'Men Tshir...</msg>
+<var>${json_data}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.712917" elapsed="0.001758"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-20T08:00:18.715655" level="INFO">${api_response_code} = 200</msg>
+<var>${api_response_code}</var>
+<arg>${json_data}</arg>
+<arg>responseCode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.715235" elapsed="0.000488"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-11-20T08:00:18.716597" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${api_response_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.716260" elapsed="0.000469"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>API internal code verified: ${api_response_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.717283" elapsed="0.000665"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-20T08:00:18.719137" level="INFO">${products_list} = [{'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 2, 'name': 'Men Tshirt', 'price': 'Rs. 400', 'brand': '...</msg>
+<var>${products_list}</var>
+<arg>${json_data}</arg>
+<arg>products</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.718468" elapsed="0.000736"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-20T08:00:18.720057" level="INFO">Length is 34.</msg>
+<msg time="2025-11-20T08:00:18.720217" level="INFO">${number_of_products} = 34</msg>
+<var>${number_of_products}</var>
+<arg>${products_list}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.719791" elapsed="0.000473"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${number_of_products} &gt; 0</arg>
+<arg>msg=The 'products' list was empty, but expected items.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.720940" elapsed="0.000557"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Successfully retrieved ${number_of_products} products.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-20T08:00:18.721992" elapsed="0.000536"/>
+</kw>
+<status status="PASS" start="2025-11-20T08:00:17.793471" elapsed="0.929736"/>
+</test>
+<status status="PASS" start="2025-11-20T08:00:17.397774" elapsed="1.328434"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ae Api Tests" id="s1" pass="1" fail="0" skip="0">Ae Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

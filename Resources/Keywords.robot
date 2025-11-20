@@ -6,6 +6,8 @@ Library           SeleniumLibrary
 Resource          Variables.robot
 Library           FakerLibrary
 Library           DateTime
+Library           ../Libraries/ParabankLogin.py
+
 
 
 
@@ -14,25 +16,25 @@ Library           DateTime
 
 Open Browser To Home Page
     [Documentation]    Opens the Chrome browser and navigates to the login page.
-    Open Browser    ${LOGIN_URL}    ${BROWSER}
-    Maximize Browser Window
+    # REFACTORED: Delegates to Python library
+    Navigate To Home Page    ${LOGIN_URL}    ${BROWSER}
 
 Login With Valid Credentials
     [Documentation]    Enters valid username and password and clicks login.
-    Input Text    name:username    ${USERNAME}
-    Input Text    name:password    ${PASSWORD}
-    Click Button    class:button
+    # REFACTORED: Delegates to Python library
+    Perform Login    ${USERNAME}    ${PASSWORD}
 
 Verify Successful Login
     [Documentation]    Checks for the expected welcome message after login.
-    Element Text Should Be    ${ACCOUNT_NAME_ASSERTION}    Welcome ${FIRST_NAME} ${LAST_NAME}
-    
+    # REFACTORED: Delegates to Python library
+    Verify User Logged In    ${FIRST_NAME}    ${LAST_NAME}
+
 Open Login Page
-    Go To    ${LOGIN_URL} 
-
-
+    Go To    ${LOGIN_URL}
 
 Generate Unique User Data
+    # REMAINS UNCHANGED: Test data generation should stay in Robot,
+    # as it uses specialized Robot libraries like FakerLibrary.
     ${TIMESTAMP}=    Get Current Date    result_format=%Y%m%d%H%M%S
     ${UNIQUE_USERNAME}=    Set Variable    user_${TIMESTAMP}
 
@@ -84,12 +86,9 @@ Verify Account Creation Success
 Click Sign Up Button
     Wait Until Element Is Visible   ${SIGN_UP_BUTTON_LOCATOR}
     Click Button    ${SIGN_UP_BUTTON_LOCATOR}
-    
-    
+
+
 Logout of User Account
-    Click Link    ${SIGN_OUT}
+    # REFACTORED: Delegates to Python library
+    Log Out From Account
     Wait Until Page Contains    ${lOGIN_header}
-
-
-
-

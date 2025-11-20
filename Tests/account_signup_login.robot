@@ -12,15 +12,12 @@ Suite Teardown          Close Browser
 
 
 *** Test Cases ***
-
 Successful Account Sign Up With Unique Data
     [Documentation]    Tests account creation using newly generated unique data.
     Click Register Link
     Fill Out All Sign Up Fields
     Click Sign Up Button
     Verify Account Creation Success
-
-
 Verify that user can login successfuly to a customer account
     [Documentation]    Test a successful login with valid credentials.
     Logout of User Account

@@ -8,7 +8,7 @@ ${site_url}  https://parabank.parasoft.com/parabank/admin.htm
 ${browser}  Chrome
 
 
-
+# --- LOCATORS FOR SIGNUP ---
 ${Register}           link:Register
 ${BROWSER}                 chrome
 ${FIRST_NAME_FIELD}        name:customer.firstName
