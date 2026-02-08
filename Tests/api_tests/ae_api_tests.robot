@@ -22,3 +22,5 @@ Verify Product List API
     ${number_of_products}=    Get Length    ${products_list}
     Should Be True    ${number_of_products} > 0    msg=The 'products' list was empty, but expected items.
     Log To Console    Successfully retrieved ${number_of_products} products.
+
+    #create tag
